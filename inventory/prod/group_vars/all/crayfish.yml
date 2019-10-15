@@ -1,0 +1,2 @@
+---
+crayfish_gemini_base_url: "http://{{ hostvars[groups['crayfish'][0]].ansible_host }}:{{ apache_listen_port }}/gemini"

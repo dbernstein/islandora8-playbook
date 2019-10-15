@@ -1,0 +1,20 @@
+---
+
+tomcat8_users:
+  - username: islandora
+    password: "{{ islandora_tomcat_password }}"
+    roles:
+      - manager-gui
+
+tomcat8_java_opts:
+  - -Djava.awt.headless=true
+  - -Dfile.encoding=UTF-8
+  - -server
+  - -Xms512m
+  - -Xmx1024m
+  - -XX:NewSize=256m
+  - -XX:MaxNewSize=256m
+  - -XX:PermSize=256m
+  - -XX:MaxPermSize=256m
+  - -Dcom.bigdata.rdf.sail.webapp.ConfigParams.propertyFile={{ blazegraph_home_dir }}/conf/RWStore.properties
+  - -Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true

@@ -20,4 +20,8 @@
     - geerlingguy.drupal
     - Islandora-Devops.drupal-openseadragon
     - webserver-app
+    - name: geerlingguy.mysql
+      when: claw_db == 'mysql'
+    - name: geerlingguy.postgresql
+      when: claw_db == 'pgsql'
     - Islandora-Devops.matomo
