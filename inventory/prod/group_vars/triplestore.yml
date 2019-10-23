@@ -1,5 +1,7 @@
 ---
 
+alpaca_triplestore_base_url: "http://{{ hostvars[groups['triplestore'][0]].ansible_host  }}:8080/bigdata"
+
 tomcat8_users:
   - username: islandora
     password: "{{ islandora_tomcat_password }}"
