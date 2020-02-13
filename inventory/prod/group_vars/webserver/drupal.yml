@@ -49,7 +49,7 @@ drupal_enable_modules:
   - islandora_oaipmh
 drupal_trusted_hosts:
   - ^localhost$
-  - "{{ hostvars[groups['webserver'][0]].ansible_host }}"
+  - "{{ drupal_host }}"
   - "{{ hostvars[groups['karaf'][0]].ansible_host }}"
   - "{{ drupal_db_host }}"
   - "{{ hostvars[groups['crayfish'][0]].ansible_host }}"
