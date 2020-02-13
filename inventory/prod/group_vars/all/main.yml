@@ -3,7 +3,7 @@
 islandora_distro: "ubuntu/bionic64"
 # Change selinux status to permissive
 disable_selinux: yes
-ansible_ssh_common_args: '-o ProxyCommand="ssh -A {{ bastion_host }} -W %h:%p"'
+ansible_ssh_common_args: '-o ProxyCommand="ssh -A {{ bastion_host }} -oStrictHostKeyChecking=no -W %h:%p"'
 
 islandora_extra_ubuntu_packages:
   - wget
