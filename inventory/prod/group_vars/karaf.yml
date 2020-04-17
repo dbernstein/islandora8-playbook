@@ -4,6 +4,7 @@
  alpaca_from_source: yes
  alpaca_version: dev
  alpaca_clone_directory: /opt/alpaca
+ alpaca_broker_url: "{{ broker_url }}"
  alpaca_karaf_repos:
   - mvn:org.apache.camel.karaf/apache-camel/2.20.4/xml/features
   - mvn:org.apache.activemq/activemq-karaf/5.15.0/xml/features
@@ -15,3 +16,4 @@
  alpaca_gemini_base_url: "http://{{ hostvars[groups['crayfish'][0]].ansible_host  }}:{{ apache_listen_port }}/gemini/"
  alpaca_houdini_base_url: "http://{{ hostvars[groups['crayfish'][0]].ansible_host  }}:{{ apache_listen_port }}/houdini"
  alpaca_homarus_base_url: "http://{{ hostvars[groups['crayfish'][0]].ansible_host  }}:{{ apache_listen_port }}/homarus"
+ alpaca_fedora_base_url: "http://{{ hostvars[groups['fedora'][0]].ansible_host  }}:{{ apache_listen_port }}/fcrepo/rest"
